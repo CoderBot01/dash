@@ -65,6 +65,15 @@ This project is built with:
 - Product/engineering handoff: `docs/PM_HANDOFF_SPEC.md`
 - Feature-level technical guide: `docs/FEATURE_DEVELOPMENT.md`
 
+## SPA Refresh (Production 404 Fix)
+
+This app uses React Router client-side routes (`/leads`, `/teams/:id`, etc.).  
+Production hosting must rewrite unknown routes to `index.html`.
+
+Included configs:
+- `vercel.json` (Vercel rewrite)
+- `netlify.toml` + `public/_redirects` (Netlify redirect)
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
